@@ -1,5 +1,8 @@
 # Level 02
 
+## Level Goal
+The password for the next level is stored in a file called `spaces in this filename` located in the home directory
+
 ## Access
 ```
 ssh bandit2@bandit.labs.overthewire.org -p 2220
