@@ -5,9 +5,11 @@
 ## Set Aliases
 ```
 alias l='ls -lah'
+alias v=vim
 ```
 
 # Resources
+
 
 
 # Retospective
@@ -20,4 +22,7 @@ alias l='ls -lah'
 
 
 ## What might I need to learn for better mastery, or what strategies might I use the next time to get better results?
+
+
+## How other people solved this?
 
