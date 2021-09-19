@@ -26,7 +26,7 @@ drwxr-xr-x 41 root     root     4.0K May  7  2020 ..
 
 ## Login with private SSH key - FAIL
 ```
-ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -P 2220
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
 ```
 It just hangs and results to Connection timed out.
 
@@ -46,15 +46,44 @@ Forgot that you have to add the key to the agent first 🤦.
 
 ## Relogin again - FAIL
 ```
-ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -P 2220
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
 ```
 Still fails to login
 
-## Test SSH connection
+## Test SSH connection - FAIL
 ```
 ssh -T bandit.labs.overthewire.org
 ssh -T bandit14@bandit.labs.overthewire.org
 ```
 
-# Retospective
+## Try SSH `localhost` with port - FAIL
+```
+ssh -i sshkey.private bandit14@localhost -p 2220
 
+ssh: connect to host localhost port 2220: Connection refused
+```
+## SSH `localhost` without port
+```
+ssh -i sshkey.private bandit14@localhost
+```
+
+## I'm In! *hacker voice* 😜
+```
+echo $USER
+
+bandit14
+```
+
+# Retospective
+* My first time ssh with the same server, and I do not need to provide the host, just the `localhost` should be fine.
+* I'm not sure if I needed to perform `ssh-add sshkey.private`. I can't verify it yet.
+* Just keep in mind that the ssh private key should be around `600` or `400`, which means that it should only be *read/write* or just *read* permission.
+
+## What went well?
+Was able to figure out that I need to use `localhost` from the *Level Goal* with its *Note*.
+
+## What could have gone better?
+Knowing that I do not need to use the host whenever it's the same server I'm trying to ssh into.
+
+## What might I need to learn for better mastery, or what strategies might I use the next time to get better results?
+Improve knowledge in how ssh works within the same server, as I also do not need to provide the `port`. I do not understand if ssh to user `bandit14` does not allow port or does it already use the port used when accessing user `bandit13`.
