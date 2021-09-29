@@ -8,6 +8,9 @@ alias l='ls -lah'
 alias v=vim
 ```
 
+# Flag
+
+
 # Resources
 
 
