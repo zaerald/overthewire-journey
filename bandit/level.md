@@ -2,6 +2,12 @@
 
 ## Level Goal
 
+## Access
+```
+ssh bandit00@bandit.labs.overthewire.org -p 2220
+```
+pwd: 
+
 ## Set Aliases
 ```
 alias l='ls -lah'
