@@ -1,7 +1,8 @@
 # Level 03
 
 ## Level Goal
-The password for the next level is stored in a hidden file in the `inhere` directory.
+The password for the next level is stored in a hidden file in the `inhere`
+directory.
 
 ## Access
 ```
