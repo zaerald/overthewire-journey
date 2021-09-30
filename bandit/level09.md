@@ -29,3 +29,8 @@ strings data.txt
 ![02](./level09/02.png)
 
 ![03](./level09/03.png)
+
+# Flag
+```
+truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+```

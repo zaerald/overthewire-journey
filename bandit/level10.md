@@ -22,3 +22,8 @@ base64 -d data.txt
 
 The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 ```
+
+# Flag
+```
+IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+```

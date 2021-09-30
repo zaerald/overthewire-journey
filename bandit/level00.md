@@ -22,6 +22,10 @@ cat ~/readme
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 ```
 
+# Flag
+```
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+```
 
 ## Useful Tools
 For your convenience we have installed a few usefull tools which you can find

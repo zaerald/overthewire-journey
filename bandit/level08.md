@@ -15,3 +15,8 @@ pwd: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 sort data.txt | uniq -u
 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 ```
+
+# Flag
+```
+UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+```

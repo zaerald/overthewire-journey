@@ -45,6 +45,10 @@ Host: localhost
 ```
 Is this the *submit*?
 
+# Flag
+```
+BfMYroe26WYalil77FoDi9qh59eK5xNr
+```
 
 # Resources
 * [How the Internet Works in 5 Minutes](https://youtu.be/7_LPdttKXPc)

@@ -78,6 +78,11 @@ echo $USER
 bandit14
 ```
 
+# Flag
+```
+sshkey.private
+```
+
 # Retospective
 * My first time ssh with the same server, and I do not need to provide the host, just the `localhost` should be fine.
 * I'm not sure if I needed to perform `ssh-add sshkey.private`. I can't verify it yet.

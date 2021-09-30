@@ -100,7 +100,9 @@ closed
 ```
 
 # Flag
+```
 cluFn7wTiGryunymYOu4RcffSxQluehd
+```
 
 # Resources
 * [openssl s_client introduction](https://youtu.be/dgsSvHK_lmU)
