@@ -10,12 +10,14 @@ pwd:
 
 ## Set Aliases
 ```
-alias l='ls -lah'
+alias l='ls -lah --color=auto'
 alias v=vim
+export EDITOR=vim
 ```
 
 # Flag
-
+```
+```
 
 # Resources
 
