@@ -15,6 +15,11 @@ alias v=vim
 export EDITOR=vim
 ```
 
+## Current Level Password File
+```
+/etc/bandit_pass/bandit00
+```
+
 # Flag
 ```
 ```
