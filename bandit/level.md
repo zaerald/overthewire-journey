@@ -29,7 +29,7 @@ export EDITOR=vim
 
 
 # Retospective
-* Thoughts/Questions to be answered for future.
+- Thoughts/Questions to be answered for future.
 
 ## What went well?
 
