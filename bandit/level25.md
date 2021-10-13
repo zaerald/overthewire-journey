@@ -1,5 +1,6 @@
 # Level 25
 
+
 ## Level Goal
 Logging in to bandit26 from bandit25 should be fairly easy… The shell for user
 bandit26 is not `/bin/bash`, but something else. Find out what it is, how it
@@ -135,11 +136,112 @@ ssh: connect to host bandit.labs.overthewire.org port 2220: Connection timed out
 ```
 It also timeouts. I'm not sure on how can I approach this now.
 
+## TRY to connect with localhost - PASS
+```
+ssh -i bandit26.sshkey bandit26@localhost
+
+...
+
+  Enjoy your stay!
+
+  _                     _ _ _   ___   __
+ | |                   | (_) | |__ \ / /
+ | |__   __ _ _ __   __| |_| |_   ) / /_
+ | '_ \ / _` | '_ \ / _` | | __| / / '_ \
+ | |_) | (_| | | | | (_| | | |_ / /| (_) |
+ |_.__/ \__,_|_| |_|\__,_|_|\__|____\___/
+Connection to localhost closed.
+```
+
+I forgot that when connecting to the same host, I do not need to provide the
+hostname and the port.
+
+## Look for bandit26 passwd file
+```
+cat /etc/passwd | grep bandit26
+
+bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
+```
+It's using `/usr/bin/showtext`
+
+## Analyze the `showtext` file
+```
+cat /usr/bin/showtext
+
+#!/bin/sh
+
+export TERM=linux
+
+more ~/text.txt
+exit 0
+```
+First time seeing the `TERM` environment variable. Let's look for an answer: [this][term1] and [this][term2]..
+It executes `more` to `~/text.txt` file then exits. Can I just change the `more` binary,
+by changing `PATH` environment variable?
+
+## Check file permission
+```
+ls -lah /home/bandit26/text.txt
+
+-rw-r----- 1 bandit26 bandit26 258 May  7  2020 /home/bandit26/text.txt
+```
+I do not have the right permission to view the file for the current user.
+But it just seems that it's just the ASCII art shown when logging in...
+
+## TRY to mess up `more` command - FAIL
+```
+# create empty directory
+$ cd $(mktemp -d)
+/tmp/tmp.9E8ImbEyBF
+
+# use vim instead
+$ which vim
+/usr/bin/vim
+
+$ ln -s /usr/bin/vim more
+$ ls
+
+more
+
+# check PATH
+$ echo $PATH
+
+/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
+# update PATH
+$ export PATH=/tmp/tmp.9E8ImbEyBF:$PATH
+
+# check if more is vim
+$ more --version
+
+VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Jun 21 2019 04:10:35)
+...
+
+# try to see if the `PATH` would be inherited for the same host
+$ cd ~
+$ ssh -i bandit26.sshkey bandit26@localhost
+```
+- I wasn't able to override the command, turns out that when logging in the `$PATH`
+  is not inherited. It uses its own environment variables, and realizing that it
+  is logical to use its own environment variables and not inherit them 🤦.
+
+- Is the `TERM=linux` the hint? I can't seem to find a hint for that.
+- Is there more for `more` command? Let's scan the man page.
+
+## Scanning `more` man page
+```
+man more
+```
+I can't find anything that will help me, as I can't pass any **OPTIONS** directly.
+Why do they need to set `TERM=linux`?
+
 # Flag
 ```
 ```
 
 # Resources
+[term1]: https://unix.stackexchange.com/questions/198794/where-does-the-term-environment-variable-default-get-set
+[term2]: https://askubuntu.com/questions/920908/what-does-export-term-linux-actually-do-when-inside-a-script
 
 
 # Retospective
