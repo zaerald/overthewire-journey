@@ -221,6 +221,7 @@ VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Jun 21 2019 04:10:35)
 $ cd ~
 $ ssh -i bandit26.sshkey bandit26@localhost
 ```
+
 - I wasn't able to override the command, turns out that when logging in the `$PATH`
   is not inherited. It uses its own environment variables, and realizing that it
   is logical to use its own environment variables and not inherit them 🤦.
@@ -235,26 +236,157 @@ man more
 I can't find anything that will help me, as I can't pass any **OPTIONS** directly.
 Why do they need to set `TERM=linux`?
 
+## Reproducing the script
+This way I investigate furhter and doesn't need to wait when ssh-ing.
+
+```text
+$ cd $(mktemp -d)
+# /tmp/tmp.yET9YKOl0l
+
+$ touch test.sh
+
+#!/bin/sh
+
+export TERM=linux
+
+more /tmp/tmp.yET9YKOl0l/text.txt
+exit 0
+
+$ chmod u+x test.sh
+
+$ touch text.txt
+  _                     _ _ _   ___   __
+ | |                   | (_) | |__ \ / /
+ | |__   __ _ _ __   __| |_| |_   ) / /_
+ | '_ \ / _` | '_ \ / _` | | __| / / '_ \
+ | |_) | (_| | | | | (_| | | |_ / /| (_) |
+ |_.__/ \__,_|_| |_|\__,_|_|\__|____\___/
+```
+
+### Observing the script behavior
+- Comparing this to `less` command, when the `less` command reads a file it stays
+there. The `more` command just exits after reading thus it continues to 
+`exit 0` and `ssh` wouldn't work.
+- How can I make the `more` command have a similar behavior? Can I pass a
+  command argument? But, it's a script that I do not have a write permission so
+  I wouldn't be able to pass anything.
+- Reading from man page of `more` I can invoke a vi editor which can invoke a subshell.
+- Playing with `more`, it won't exit the program as long as there are more
+  content to the file! Previously, checked the file permission and we do not
+  have any write access...
+
+## TRY to play with `more` font size
+If we can't change the file content of the file, let's find out if we can force
+the `more` to not suspend as it can't print everything if the font is VERY
+large.
+
+### `more` with small font size
+![more small text](level25/test-small-text.png)
+
+### `more` with LARGE text
+![more large text](level25/test-large-text.png)
+
+IT WORKS!!! We can now invoke the `vi` editor and invoke a subshell from there.
+
+### `more` invoking `vi` editor
+We can invoke the `vi` editor from `more`, stated in the man page by just pressing `v`
+> Start up an editor at current line.  The editor is taken from the environment
+> variable VISUAL if defined, or EDITOR if VISUAL is not defined, or defaults
+> to vi if neither VISUAL nor EDITOR is defined.
+
+We just need to ensure that `$EDITOR` contains `vi` or both `$EDITOR` and `$VISUAL` is empty.
+
+```
+echo $EDITOR
+# empty
+echo $VISUAL
+# empty
+```
+
+![invoke vi editor](level25/test-invoke-vi-editor.png)
+
+### Invoking commands from `vi` editor
+```
+:!echo $SHELL
+
+/bin/bash
+```
+
+![run command from vi](level25/test-run-command.png)
+
+Output
+
+![command output](level25/test-command-output.png)
+
+- Our testing works for invoking a command from `more`. It'll only work for `ssh`
+  if the `bandit26` user doesn't set the `$EDITOR` or `$VISUAL` 
+  into something else.
+
+## TRY to perform the same steps
+
+### Overview
+1. Increase the font size
+2. Perform `ssh`
+3. Invoke `vi`
+4. Retrieve password file by editing `:e /etc/bandit_pass/bandit26`
+
+### 1. Increase the font size
+
+![increase font size](level25/attempt01-increase-font-size.png)
+
+
+### 2. Perform `ssh`
+`ssh` performed and `more` suspended
+
+![more suspended](level25/attempt01-more-suspended.png)
+
+### 3. Invoke `vi`
+
+![invoke vi](level25/attempt01-invoke-vi.png)
+Phew, we can properly invoke `vi` editor. Fortunately the environment variables
+was set to `vi` or undefined.
+
+### 4. Retrieve password file by editing `:e /etc/bandit_pass/bandit26`
+
+![edit password file](level25/attempt01-edit-bandit-pw.png)
+
+Viewing the password content
+![get flag](level25/attempt01-get-flag.png)
+
 # Flag
 ```
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
 ```
 
 # Resources
 [term1]: https://unix.stackexchange.com/questions/198794/where-does-the-term-environment-variable-default-get-set
 [term2]: https://askubuntu.com/questions/920908/what-does-export-term-linux-actually-do-when-inside-a-script
 
-
 # Retospective
-- Thoughts/Questions to be answered for future.
+- It's a bit odd to solve this by resizing the font size lol.
+- This took me while to solve and did some multiple iterations.
 
 ## What went well?
-
+- I know that we can invoke commands or subshell from `vi`, as I've been using
+  `vim` for my editor.
+- Scanning `more` man page helped me a lot, as I noticed that we can invoke
+  `vi` if some environment varibles are undefiend.
 
 ## What could have gone better?
-
+- Understanding how `more` works.
 
 ## What might I need to learn for better mastery, or what strategies might I use the next time to get better results?
-
+- Knowledge in `TERM=linux`.
 
 ## How other people solved this?
+
+### [OverTheWire’s Bandit 25 -> 26 Shell](https://medium.com/@coturnix97/overthewires-bandit-25-26-shell-355d78fd2f4d) by coturnix97
+
+They have resized their terminal, and wasn't surprised as I have resized the
+font. Was expecting that they have managed to edit the `text.txt` file and add
+more contents from it.
+
+### [OverTheWire: Bandit Level 25](https://medium.com/@theGirlWhoEncrypts/overthewire-bandit-level-25-level-26-323defac0551) by S.P.
+
+They have also resized their terminal.
 
