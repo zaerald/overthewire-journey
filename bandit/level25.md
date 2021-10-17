@@ -179,6 +179,9 @@ First time seeing the `TERM` environment variable. Let's look for an answer: [th
 It executes `more` to `~/text.txt` file then exits. Can I just change the `more` binary,
 by changing `PATH` environment variable?
 
+[term1]: https://unix.stackexchange.com/questions/198794/where-does-the-term-environment-variable-default-get-set
+[term2]: https://askubuntu.com/questions/920908/what-does-export-term-linux-actually-do-when-inside-a-script
+
 ## Check file permission
 ```
 ls -lah /home/bandit26/text.txt
@@ -237,7 +240,7 @@ I can't find anything that will help me, as I can't pass any **OPTIONS** directl
 Why do they need to set `TERM=linux`?
 
 ## Reproducing the script
-This way I investigate furhter and doesn't need to wait when ssh-ing.
+This way I can investigate further and doesn't need to wait when ssh-ing.
 
 ```text
 $ cd $(mktemp -d)
@@ -357,10 +360,6 @@ Viewing the password content
 ```
 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
 ```
-
-# Resources
-[term1]: https://unix.stackexchange.com/questions/198794/where-does-the-term-environment-variable-default-get-set
-[term2]: https://askubuntu.com/questions/920908/what-does-export-term-linux-actually-do-when-inside-a-script
 
 # Retospective
 - It's a bit odd to solve this by resizing the font size lol.
