@@ -26,7 +26,7 @@ export EDITOR=vim
 
 ## Create temporary directory
 ```
-cd $(mktemp -d) 
+cd $(mktemp -d)
 # /tmp/tmp.jkaz0wi42O
 ```
 
