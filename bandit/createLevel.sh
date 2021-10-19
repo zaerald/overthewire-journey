@@ -3,8 +3,8 @@
 cd "$(dirname "$0")"
 
 level_number=$1
-if [[ $# -eq 0 || $level_number -le 0 || $level_number -ge 35 ]]; then
-  echo "Please input a valid level number 1-34"
+if [[ $# -eq 0 || $level_number -le 0 || $level_number -ge 34 ]]; then
+  echo "Please input a valid level number 1-33"
   exit 1
 fi
 
