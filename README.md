@@ -3,7 +3,7 @@
 https://overthewire.org
 
 ## Wargames
-- [ ] [Bandit](https://overthewire.org/wargames/bandit) - WIP [journey](./bandit)
+- [x] [Bandit](https://overthewire.org/wargames/bandit) - [journey](./bandit)
 - [ ] [Natas](https://overthewire.org/wargames/natas)
 - [ ] [Leviathan](https://overthewire.org/wargames/leviathan)
 - [ ] [Krypton](https://overthewire.org/wargames/krypton)
