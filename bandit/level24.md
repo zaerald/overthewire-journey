@@ -120,9 +120,10 @@ chmdo u+x brute.sh
 - My first script runs out of memory.`./brute.sh: fork: retry: Resource temporarily unavailable`. So I added sleep and timeouts. 
   But is is so sloooowwwww...1try/second which will take me 9999s/60m/60h = 2.78 hours.
 - Changed to 5try/2s. The 5try/2s is the sweet spot, 10try/2s fails with resource unavailable.
-  (9,999/5) * 2s = 3,999.6s/60m = 66.66 minutes.
+  `(9,999/5) * 2s = 3,999.6s/60m = 66.66 minutes.`
 
 ## While running try to search for output
+
 ```
 grep -Hnriv 'enter' out/ | sort -u > flag.txt
 cat flag.txt
@@ -148,8 +149,7 @@ uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
 # Resources
 - [Netcat](https://youtube.com/playlist?list=PLBf0hzazHTGOa6ipWQXp-QacbKyV7rKox) by HackerSploit
 
-# Retospective
-
+# Retrospective
 
 ## What went well?
 - Managed to create a script to bruteforce the daemon even if it's slow.

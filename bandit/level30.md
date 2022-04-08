@@ -46,7 +46,7 @@ drwxr-sr-x 8 bandit30 root 4.0K Oct 18 21:36 .git
 -rw-r--r-- 1 bandit30 root   30 Oct 18 21:36 README.md
 ```
 
-## Read the README.md file
+## Read the `README.md` file
 ```
 less README.md
 
@@ -62,7 +62,7 @@ git log --oneline --all --decorate --graph
 ```
 Oh! This is challenging for me.
 
-## View reflog
+## View `reflog`
 ```
 git reflog
 
@@ -215,7 +215,7 @@ Now I'm curious how they did this...
 [git-tag]: https://git-scm.com/docs/git-tag
 
 
-# Retospective
+# Retrospective
 A bit dumbness on my end, I thought that the flag was a commit sha!
 Performed some things lol, but this helped me review more about git.
 

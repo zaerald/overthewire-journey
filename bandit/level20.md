@@ -185,7 +185,7 @@ gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
   - [LCL 24 - netcat tutorial - Linux Command Line tutorial for forensics](https://youtu.be/cq9RHDL2yMM)
   - [Netcat Tutorial - The Swiss Army Knife Of Networking - Reverse Shell](https://youtu.be/KlzSBk7VMss)
 
-# Retospective
+# Retrospective
 
 ## What went well?
 * Managed to learn a bit about netcat.
@@ -205,3 +205,4 @@ Their solution is:
 echo "GbKksEFF4yrVs6il55v6gwY5aVje5f0j" | nc -l localhost -p 61337 &
 ./suconnect 61337
 ```
+

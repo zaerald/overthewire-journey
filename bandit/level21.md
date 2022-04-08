@@ -117,13 +117,13 @@ Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 
 # Resources
 
-# Retospective
+# Retrospective
 
 ## What went well?
 * I have used my knowledge in cron jobs.
 
 ## What could have gone better?
-* If I can just edit the `crontab` but remembered that it's a shared server and other people might crete scripts from `/tmp` and execute it from cronjobs.
+* If I can just edit the `crontab` but remembered that it's a shared server and other people might create scripts from `/tmp` and execute it from cronjobs.
 
 
 ## What might I need to learn for better mastery, or what strategies might I use the next time to get better results?
@@ -134,3 +134,4 @@ Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 ### [</ OverTheWire > Bandit Level 21 → Level 22](https://medium.com/@theGirlWhoEncrypts/overthewire-bandit-level-21-level-22-37f933ab3a57) by </ The Girl Who Encrypts >
 
 Similar solution to what I did.
+

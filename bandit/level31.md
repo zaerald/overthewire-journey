@@ -47,7 +47,7 @@ drwxr-sr-x 8 bandit31 root 4.0K Oct 18 22:54 .git
 -rw-r--r-- 1 bandit31 root  147 Oct 18 22:54 README.md
 ```
 
-## Read the README.md file
+## Read the `README.md` file
 ```
 less README.md
 
@@ -59,7 +59,7 @@ Details:
     Branch: master
 ```
 
-## Read the .gitignore file
+## Read the `.gitignore` file
 ```
 less .gitignore
 
@@ -146,7 +146,7 @@ Found the flag!
 56a9bf19c63d650ce78e6ec0354ee45e
 ```
 
-# Retospective
+# Retrospective
 
 ## What went well?
 - I know how `.gitignore` works.

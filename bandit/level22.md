@@ -80,7 +80,7 @@ We can actually run this file to see how it works.
 Copying passwordfile /etc/bandit_pass/bandit22 to /tmp/8169b67bd894ddbb4412f91573b38db3
 ```
 
-## Generte the temporary filename and print password
+## Generate the temporary filename and print password
 ```
 name=bandit23
 mytarget=$(echo I am user $name | md5sum | cut -d ' ' -f 1) && echo "filename: $mytarget" && cat /tmp/$mytarget
@@ -94,7 +94,7 @@ jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
 jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
 ```
 
-# Retospective
+# Retrospective
 
 ## What went well?
 * I can understand shell scripts.
@@ -111,3 +111,4 @@ They have run the portion of the script to identify the filename
 myname=bandit23
 echo I am user $myname | md5sum | cut -d ' ' -f 1
 ```
+

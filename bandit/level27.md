@@ -76,7 +76,7 @@ Thanks Ben Dover for creating this game!
 0ef186ac70e04ea33b4c1853d2526fa2
 ```
 
-# Retospective
+# Retrospective
 
 ## What went well?
 - I'm familiar at working with git repositories.

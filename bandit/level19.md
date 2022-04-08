@@ -102,7 +102,7 @@ GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 * [Linux Command Line (25) setuid](https://youtu.be/V8gexCVHcN0)
 * [Linux SetUID, SetGID, Sticky Bit](https://youtu.be/2gHp_CgUets)
 
-# Retospective
+# Retrospective
 * It is worth noting that when the bit is capital `S` rather than the lowercase `s`, this means that the file doesn't have an executable bit.
 
 ## What went well?
@@ -131,3 +131,4 @@ file bandit20-do
 
 bandit20-do: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=8e941f24b8c5cd0af67b22b724c57e1ab92a92a1, not stripped
 ```
+

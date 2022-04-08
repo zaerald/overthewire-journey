@@ -242,7 +242,7 @@ UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 ```
 
-# Retospective
+# Retrospective
 
 ## What went well?
 * Somewhat knows how to read the script, I was just not familiar with the
@@ -261,7 +261,7 @@ why my script couldn't write to my `out` file.
 ## What might I need to learn for better mastery, or what strategies might I use the next time to get better results?
 * Improve more about user permissions
 * Scan more about the file conditions as I do not know what `-a` is inside the
-  condition. But it was actully just the logical AND (`&&`).
+  condition. But it was actually just the logical AND (`&&`).
 
 ## How other people solved this?
 

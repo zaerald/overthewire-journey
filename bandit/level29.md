@@ -46,7 +46,7 @@ drwxr-sr-x 8 bandit29 root 4.0K Oct 18 15:35 .git
 -rw-r--r-- 1 bandit29 root  131 Oct 18 15:35 README.md
 ```
 
-## Read the README.md file
+## Read the `README.md` file
 ```
 less README.md
 
@@ -164,7 +164,7 @@ that contains a blank line.
 5b90576bedb2cc04c86a9e924ce42faf
 ```
 
-# Retospective
+# Retrospective
 
 ## What went well?
 - My knowledge in git still useful for this level.

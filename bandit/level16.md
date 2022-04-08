@@ -186,7 +186,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 * [How to Check Remote Ports are Reachable Using ‘nc’ Command](https://www.tecmint.com/check-remote-port-in-linux)
 
 
-# Retospective
+# Retrospective
 * Forgot how to scan the current ports using `nc`.
 * Is there a better way to scan with specific type? For this case we can check for ports that are open that accepts SSL.
 
@@ -218,3 +218,4 @@ cat /etc/bandit_pass/bandit16 | openssl s_client -connect
 localhost:31790 -quiet
 cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31960 -quiet
 ```
+

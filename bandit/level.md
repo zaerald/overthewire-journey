@@ -28,7 +28,7 @@ export EDITOR=vim
 
 
 
-# Retospective
+# Retrospective
 - Thoughts/Questions to be answered for future.
 
 ## What went well?

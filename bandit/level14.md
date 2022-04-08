@@ -53,10 +53,10 @@ BfMYroe26WYalil77FoDi9qh59eK5xNr
 # Resources
 * [How the Internet Works in 5 Minutes](https://youtu.be/7_LPdttKXPc)
 
-# Retospective
+# Retrospective
 
 ## What went well?
-* I'm aware that netcat can be used for port scanning, but dunno how to do it by heart. I'm able to scan and see if the port is open, for verification purposes.
+* I'm aware that `netcat` can be used for port scanning, but dunno how to do it by heart. I'm able to scan and see if the port is open, for verification purposes.
 * Tried to send an HTTP request using `telnet`, surprisingly retrieved the password for next level.
 
 ## What could have gone better?
@@ -79,3 +79,4 @@ echo "4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e" | nc localhost 30000
 # OR
 cat /etc/bandit_pass/bandit14 | nc localhost 30000
 ```
+

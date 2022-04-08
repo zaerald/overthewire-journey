@@ -108,7 +108,7 @@ cluFn7wTiGryunymYOu4RcffSxQluehd
 * [openssl s_client introduction](https://youtu.be/dgsSvHK_lmU)
 * [2 Testing TLS with OpenSSL](https://www.feistyduck.com/library/openssl-cookbook/online/ch-testing-with-openssl.html)
 
-# Retospective
+# Retrospective
 First time to use the `s_client` under the `openssl`.
 
 ## What went well?
@@ -128,3 +128,4 @@ They used a different command and turns out I can `echo` the payload and pipe it
 ```
 echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -connect localhost:30001 -ign_eof
 ```
+

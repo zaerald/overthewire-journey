@@ -10,7 +10,7 @@ ssh bandit3@bandit.labs.overthewire.org -p 2220
 ```
 pwd: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 
-## Display hiden file
+## Display hidden file
 ```
 ls -la inhere/.hidden
 ```
@@ -25,3 +25,4 @@ pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 ```
 pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 ```
+

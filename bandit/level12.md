@@ -180,3 +180,4 @@ The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 # Retrospective
 * Is there a way to use `gzip` without adding a suffix? This can work with `tar`.
 * Is there a way to decompress everything down to the text file easily (recursive)?
+

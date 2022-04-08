@@ -83,7 +83,7 @@ bandit14
 sshkey.private
 ```
 
-# Retospective
+# Retrospective
 * My first time ssh with the same server, and I do not need to provide the host, just the `localhost` should be fine.
 * I'm not sure if I needed to perform `ssh-add sshkey.private`. I can't verify it yet.
 * Just keep in mind that the ssh private key should be around `600` or `400`, which means that it should only be *read/write* or just *read* permission.
@@ -96,3 +96,4 @@ Knowing that I do not need to use the host whenever it's the same server I'm try
 
 ## What might I need to learn for better mastery, or what strategies might I use the next time to get better results?
 Improve knowledge in how ssh works within the same server, as I also do not need to provide the `port`. I do not understand if ssh to user `bandit14` does not allow port or does it already use the port used when accessing user `bandit13`.
+

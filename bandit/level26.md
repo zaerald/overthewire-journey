@@ -46,7 +46,7 @@ Run this to the vim command
 
 Nothing happened
 
-## TRY to inoke command from vim buffer to the shell - FAIL
+## TRY to invoke command from vim buffer to the shell - FAIL
 We can execute a command by 'writing' from vim buffer to the `$SHELL` or `/bin/bash`
 ```
 # write this to the vim buffer
@@ -139,7 +139,7 @@ It's using the `$SHELL` environment variable. I'll assume that vim
 will pick this up. Let's verify it on `bandit26` shell.
 
 
-## Invoke the vim from more again
+## Invoke the vim from `more` again
 - Verify the `shell` value again
 ```
 :set shell?
@@ -203,7 +203,7 @@ Confirmed that it's just the same.
 3ba3118a22e93127a4ed485be72ef5ea
 ```
 
-# Retospective
+# Retrospective
 
 ## What went well?
 - I have learned that vim uses `$SHELL` to set the `shell` config.

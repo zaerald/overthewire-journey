@@ -1,7 +1,7 @@
 # Level 17
 
 ## Level Goal
-There are 2 files in the homedirectory: `passwords.old` and `passwords.new`. The
+There are 2 files in the home directory: `passwords.old` and `passwords.new`. The
 password for the next level is in `passwords.new` and is the only line that has
 been changed between `passwords.old` and `passwords.new`
 
@@ -39,7 +39,7 @@ diff passwords.old passwords.new
 kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 ```
 
-# Retospective
+# Retrospective
 
 ## What went well?
 * Fortunately, `diff`-ing files is not new to me, as I always check for changes in my code.
@@ -52,3 +52,4 @@ Learn what other parameters are available to the `diff` tool.
 ### [OverTheWire: Bandit Level 17](https://medium.com/@secttp/overthewire-bandit-level-17-3b32603ee3b0) by S.P.
 
 They have used the same solution but with different parameter order.
+

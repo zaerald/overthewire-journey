@@ -47,7 +47,7 @@ drwxr-sr-x 8 bandit28 root 4.0K Oct 18 15:18 .git
 -rw-r--r-- 1 bandit28 root  111 Oct 18 15:18 README.md
 ```
 
-## Read the README.md file
+## Read the `README.md` file
 ```
 less README.md
 
@@ -128,7 +128,7 @@ git show de2ebe2d5fd1598cd547f4d56247e053be3fdc38
 ```
 bbc96594b4e001778eee9975372716b2
 ```
-# Retospective
+# Retrospective
 
 ## What went well?
 - I know how to use git.

@@ -50,7 +50,7 @@ They just added the `exit 0` as ssh tries to login as the user and `.bashrc` get
 IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
 ```
 
-# Retospective
+# Retrospective
 
 ## What went well?
 * I have an idea to solve by pulling the file from the server.
@@ -71,3 +71,4 @@ They still used `ssh` but with `-t` parameter.
 ```
 ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat ~/readme"
 ```
+

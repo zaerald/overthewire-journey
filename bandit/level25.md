@@ -361,7 +361,7 @@ Viewing the password content
 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
 ```
 
-# Retospective
+# Retrospective
 - It's a bit odd to solve this by resizing the font size lol.
 - This took me while to solve and did some multiple iterations.
 

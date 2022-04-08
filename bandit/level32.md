@@ -72,7 +72,7 @@ sh: 1: /BIN/BASH: not found
 ```
 I can't find a clue here...
 
-## TRY ^D if it'll exit the UPPERCASE shell and go into a normal shell - FAIL
+## TRY `^D` if it'll exit the UPPERCASE shell and go into a normal shell - FAIL
 ```
 >> Connection to bandit.labs.overthewire.org closed.
 ```
@@ -162,7 +162,7 @@ echo $SHELL
 ```
 
 Why did it work if our `$SHELL` is pointed to the `uppershell`? It should spawn
-another `uppershell` right? Should be similar to what happend when we invoked
+another `uppershell` right? Should be similar to what happened when we invoked
 an environment variable, it just spawned another shell
 ```
 >> $SHELL
@@ -194,7 +194,7 @@ c9c3199ddf4121b10cf581a98d51caee
 - [man sh](https://man7.org/linux/man-pages/man1/sh.1p.html)
 
 
-# Retospective
+# Retrospective
 
 ## What went well?
 - Knowledge in shell environment variables that gave me an idea that we can
